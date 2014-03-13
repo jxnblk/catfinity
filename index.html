@@ -13,7 +13,7 @@
 
   <div class="center p1">
     <span ng-repeat="cat in cats">
-      <a ng-href="cat.post_url"><img ng-src="{{ cat.photos[0].original_size.url }}" ng-alt="thx {{ cat.blog_name }}" class="inline-block mb1 maxh" /></a>
+      <a ng-href="{{ cat.post_url }}"><img ng-src="{{ cat.photos[0].original_size.url }}" ng-alt="thx {{ cat.blog_name }}" class="inline-block mb1 maxh" /></a>
     </span>
   </div>
 
