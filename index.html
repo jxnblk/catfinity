@@ -13,7 +13,7 @@
 
   <div class="center p1">
     <span ng-repeat="cat in cats">
-      <img ng-src="{{ cat.photos[0].original_size.url }}" class="inline-block mb1 maxh" />
+      <a ng-href="cat.post_url"><img ng-src="{{ cat.photos[0].original_size.url }}" ng-alt="thx {{ cat.blog_name }}" class="inline-block mb1 maxh" /></a>
     </span>
   </div>
 
@@ -24,6 +24,9 @@
 
   <div class="fixed t0 r0 h1 bold blue p1">{{ cats.length }} cats</div>
   
+  <footer class="center p1">
+    <p class="f5 mid-gray">powered by tumblr kthxbai</p>
+  </footer>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
   <script src="catfinity.js"></script>
 </body>

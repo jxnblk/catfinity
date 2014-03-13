@@ -2,7 +2,6 @@
 
 var catfinity = angular.module('catfinity', []);
 var apiKey = 'fUtdwgP36wKTV9LbYGbNNZ2qPMONCAIRxC3GZVTqnV0swO3RTZ';
-  
 catfinity.factory('tumblr', function($http) {
   var tumblr = {
     getCats: function($scope) {
@@ -26,7 +25,6 @@ catfinity.factory('tumblr', function($http) {
   };
   return tumblr;
 });
-  
 catfinity.controller('catfinity', ['$scope', 'tumblr', function($scope, tumblr) {
     tumblr.getCats($scope);
     $scope.moar = function() {
