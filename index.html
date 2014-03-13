@@ -1,0 +1,30 @@
+<!doctype html> 
+<html lang="en" ng-app="catfinity"> 
+<head>
+  <meta charset="utf-8">
+  <title>Catfinity</title>
+  <meta name="author" content="Jxnblk">
+  <meta name="description" content="Infinite cats">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" />
+  <style>.justify{text-align:justify;}.maxh{max-height:128px;}img{max-width:100%;}</style>
+</head>
+<body ng-controller="catfinity">
+
+  <div class="justify p1">
+    <span ng-repeat="cat in cats">
+      <img ng-src="{{ cat.photos[0].original_size.url }}" class="inline-block mb1 maxh" />
+    </span>
+  </div>
+
+  <div class="px1 py2 center">
+    <a ng-if="!loadingCats" href ng-click="moar()" class="h1 bold">moar plz</a>
+    <p ng-if="loadingCats" class="h1 bold">loading cats...</p>
+  </div>
+
+  <div class="fixed t0 r0 h1 bold blue p1">{{ cats.length }} cats</div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+  <script src="catfinity.js"></script>
+</body>
+</html>
